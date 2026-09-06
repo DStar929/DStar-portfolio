@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080817">
+  <title>DStar — Creative Portfolio</title>
+  <meta name="description" content="نمونه‌کارهای خلاقانه DStar">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="grid-bg"></div>
+
+  <div class="welcome" id="welcome">
+    <div class="welcome-mark"><img src="logo.jpg" alt="DStar"></div>
+    <div>
+      <span>WELCOME TO</span>
+      <strong>DStar</strong>
+      <small>Creative Portfolio</small>
+    </div>
+  </div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="DStar">
+      <span class="brand-logo"><img src="logo.jpg" alt="DStar logo"></span>
+      <span>DStar</span>
+    </a>
+    <nav>
+      <a href="#work">نمونه‌کارها</a>
+      <a href="#about">درباره DStar</a>
+    </nav>
+    <button class="nav-btn" onclick="openAdmin()"><span>✦</span> مدیریت</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> CREATIVE PORTFOLIO</div>
+        <h1>ایده‌ها را به<br><em>تصویر تبدیل می‌کنم.</em></h1>
+        <p>ویترین دیجیتال DStar برای نمایش طراحی‌ها، پروژه‌های گرافیکی و آثار خلاقانه؛ ساخته شده با تمرکز روی جزئیات.</p>
+        <div class="actions">
+          <a class="primary" href="#work">مشاهده نمونه‌کارها <span>↗</span></a>
+          <a class="ghost" href="#about">بیشتر درباره DStar</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>01</strong><span>Creative<br>Direction</span></div>
+          <div><strong>02</strong><span>Graphic<br>Design</span></div>
+          <div><strong>03</strong><span>Visual<br>Content</span></div>
+        </div>
+      </div>
+
+      <div class="hero-stage">
+        <div class="stage-card stage-back"></div>
+        <div class="stage-card stage-main">
+          <div class="stage-shine"></div>
+          <div class="logo-orbit orbit-one"></div>
+          <div class="logo-orbit orbit-two"></div>
+          <div class="logo-core"><img src="logo.jpg" alt="DStar"></div>
+          <div class="floating-label label-top">DS / 2026</div>
+          <div class="floating-label label-bottom">DESIGN<br>WITH PURPOSE</div>
+          <div class="corner corner-a"></div><div class="corner corner-b"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section work-section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow"><span></span> SELECTED WORKS</div>
+          <h2>نمونه‌کارهای <em>DStar</em></h2>
+          <p>آثاری که ارزش دیده شدن دارند.</p>
+        </div>
+        <div id="filters" class="filters">
+          <button class="active" data-filter="all">همه</button>
+          <button data-filter="Graphic Design">گرافیک</button>
+          <button data-filter="Logo">لوگو</button>
+          <button data-filter="Video">ویدیو</button>
+          <button data-filter="Other">سایر</button>
+        </div>
+      </div>
+      <div id="grid" class="grid"></div>
+      <div id="empty" class="empty">
+        <div class="empty-icon">✦</div>
+        <strong>هنوز پروژه‌ای اینجا نیست.</strong>
+        <span>از بخش مدیریت، اولین نمونه‌کار DStar را اضافه کن.</span>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="about-title">
+        <div class="eyebrow"><span></span> ABOUT DSTAR</div>
+        <h2>کمتر شلوغی.<br><em>بیشتر تأثیر.</em></h2>
+      </div>
+      <div class="about-copy">
+        <p>این سایت یک فضای اختصاصی برای نمایش آثار DStar است؛ جایی که طراحی، تصویر و ایده در کنار هم قرار می‌گیرند تا هر پروژه بهترین شکل خودش را نشان دهد.</p>
+        <div class="about-line"><span></span><strong>DSTAR</strong><small>CREATIVE PORTFOLIO / 2026</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="logo.jpg" alt="DStar"> <strong>DStar</strong></div>
+    <span>© 2026 DStar — All rights reserved.</span>
+    <button onclick="openAdmin()">مدیریت نمونه‌کارها ↗</button>
+  </footer>
+
+  <div id="admin" class="modal hidden">
+    <div class="modal-box">
+      <button class="close" onclick="closeAdmin()" aria-label="بستن">×</button>
+      <div id="loginPanel">
+        <div class="private-icon">✦</div>
+        <div class="eyebrow">PRIVATE AREA</div>
+        <h2>ورود به مدیریت</h2>
+        <p class="modal-subtitle">این بخش فقط برای مدیریت نمونه‌کارهای DStar است.</p>
+        <form id="loginForm">
+          <label>رمز عبور<input id="password" type="password" autocomplete="current-password" required placeholder="رمز مدیریت"></label>
+          <button class="primary full" type="submit">ورود به پنل <span>↗</span></button>
+          <div id="loginStatus"></div>
+        </form>
+      </div>
+
+      <div id="managerPanel" class="hidden">
+        <div class="eyebrow">PORTFOLIO MANAGER</div>
+        <h2>مدیریت نمونه‌کارها</h2>
+        <p class="modal-subtitle">پروژه جدید اضافه کن یا نمونه‌کارهای قبلی را مدیریت کن.</p>
+        <form id="uploadForm">
+          <label>عنوان پروژه<input name="title" required placeholder="مثلاً هویت بصری برند X"></label>
+          <label>دسته‌بندی
+            <select name="category">
+              <option value="Graphic Design">Graphic Design</option>
+              <option value="Logo">Logo</option>
+              <option value="Video">Video</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label>توضیحات<textarea name="description" placeholder="توضیح کوتاه درباره پروژه"></textarea></label>
+          <label class="drop">
+            <input id="media" type="file" name="media" accept="image/*,video/*" required>
+            <span id="fileLabel">＋ انتخاب تصویر یا ویدیو</span>
+            <small>حداکثر 100MB • آپلود امن و تکه‌ای</small>
+          </label>
+          <button class="primary full" type="submit">آپلود نمونه‌کار <span>↗</span></button>
+          <div id="status"></div>
+        </form>
+        <div class="admin-list">
+          <div class="admin-list-head"><h3>پروژه‌های فعلی</h3><span id="projectCount">0</span></div>
+          <div id="adminList"></div>
+        </div>
+        <button class="ghost full" onclick="logout()">خروج از پنل</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=20260906-3"></script>
+</body>
+</html>
